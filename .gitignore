@@ -1,5 +1,12 @@
+# Personal config
+Makefile.config
+
+# Build files
 build/
 wiringpi2.egg-info/
 dist/
 __pycache__
 *.pyc
+*_wrap.c*
+*.so
+wiringpi2.py
