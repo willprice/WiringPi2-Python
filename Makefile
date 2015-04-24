@@ -19,4 +19,7 @@ $(C_WRAPPER): $(INTERFACE_FILE)
 install:
 	sudo $(PYTHON) setup.py install
 
-.PHONY: all install
+install-develop:
+	sudo $(PYTHON) setup.py develop
+
+.PHONY: all install install-develop
