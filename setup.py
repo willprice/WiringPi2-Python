@@ -5,7 +5,7 @@ from glob import glob
 
 sources = glob('WiringPi/devLib/*.c') + \
           glob('WiringPi/wiringPi/*.c') + \
-          ['wiringpi_wrap.c']
+          ['wiringpi_wrap.c', 'wiringpi-isr.cpp']
 sources.remove('WiringPi/devLib/piFaceOld.c')
 
 _wiringpi2 = Extension(
@@ -23,7 +23,7 @@ setup(
     description = """A python interface to WiringPi 2.0 library which allows for
     easily interfacing with the GPIO pins of the Raspberry Pi. Also supports
     i2c and SPI""",
-    long_description=open('README').read(),
+    long_description=open('README.md').read(),
     ext_modules = [ _wiringpi2 ],
     py_modules = ["wiringpi2"],
     install_requires=[],
