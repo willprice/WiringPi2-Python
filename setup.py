@@ -5,7 +5,7 @@ from glob import glob
 
 sources = glob('WiringPi/devLib/*.c') + \
           glob('WiringPi/wiringPi/*.c') + \
-          ['wiringpi_wrap.c', 'wiringpi-isr.cpp']
+          ['wiringpi_wrap.cxx', 'wiringpi-isr.cpp']
 sources.remove('WiringPi/devLib/piFaceOld.c')
 
 _wiringpi2 = Extension(
